@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package protos.domain;
+
+option go_package = "github.com/wanpng/employers-profile-grpc/grpc/domain";
+
+message EmployerGrpc {
+    string id = 1;
+    string company_name = 2;
+    string website_url = 3;
+    string industry = 4;
+    string photo_url = 5;
+    string company_phone_number = 6;
+    string company_address = 7;
+    string company_information = 8;
+}

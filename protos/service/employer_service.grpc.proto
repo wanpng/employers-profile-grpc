@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package protos.service;
+
+option go_package = "github.com/wanpng/employers-profile-grpc/grpc/service";
+
+import "protos/domain/employer.grpc.proto";
+
+service EmployerService {
+
+}
+
+message GetEmployerRequest {
+    string employer_id = 1;
+}
+
+message GetEmployerResponse {
+    protos.domain.EmployerGrpc employer = 1;
+}
