@@ -7,7 +7,7 @@ option go_package = "github.com/wanpng/employers-profile-grpc/grpc/service";
 import "protos/domain/employer.grpc.proto";
 
 service EmployerService {
-
+    rpc GetEmployer(GetEmployerRequest) returns (GetEmployerResponse);
 }
 
 message GetEmployerRequest {
