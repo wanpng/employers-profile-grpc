@@ -13,4 +13,5 @@ message EmployerGrpc {
     string company_phone_number = 6;
     string company_address = 7;
     string company_information = 8;
+    bool is_lanceo = 9;
 }
