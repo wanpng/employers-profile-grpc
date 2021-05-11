@@ -8,6 +8,7 @@ import "protos/domain/employer.grpc.proto";
 
 service EmployerService {
     rpc GetEmployer(GetEmployerRequest) returns (GetEmployerResponse);
+    rpc SearchEmployer(SearchEmployerRequest) returns (SearchEmployerResponse);
 }
 
 message GetEmployerRequest {
@@ -16,4 +17,13 @@ message GetEmployerRequest {
 
 message GetEmployerResponse {
     protos.domain.EmployerGrpc employer = 1;
+}
+
+message SearchEmployerRequest {
+    repeated string employer_id = 1;
+    string keyword = 2;
+}
+
+message SearchEmployerResponse {
+    repeated string employer_id =  1;
 }

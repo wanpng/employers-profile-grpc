@@ -19,6 +19,7 @@ const _ = grpc.SupportPackageIsVersion7
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type EmployerServiceClient interface {
 	GetEmployer(ctx context.Context, in *GetEmployerRequest, opts ...grpc.CallOption) (*GetEmployerResponse, error)
+	SearchEmployer(ctx context.Context, in *SearchEmployerRequest, opts ...grpc.CallOption) (*SearchEmployerResponse, error)
 }
 
 type employerServiceClient struct {
@@ -38,11 +39,21 @@ func (c *employerServiceClient) GetEmployer(ctx context.Context, in *GetEmployer
 	return out, nil
 }
 
+func (c *employerServiceClient) SearchEmployer(ctx context.Context, in *SearchEmployerRequest, opts ...grpc.CallOption) (*SearchEmployerResponse, error) {
+	out := new(SearchEmployerResponse)
+	err := c.cc.Invoke(ctx, "/protos.service.EmployerService/SearchEmployer", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // EmployerServiceServer is the server API for EmployerService service.
 // All implementations must embed UnimplementedEmployerServiceServer
 // for forward compatibility
 type EmployerServiceServer interface {
 	GetEmployer(context.Context, *GetEmployerRequest) (*GetEmployerResponse, error)
+	SearchEmployer(context.Context, *SearchEmployerRequest) (*SearchEmployerResponse, error)
 	mustEmbedUnimplementedEmployerServiceServer()
 }
 
@@ -52,6 +63,9 @@ type UnimplementedEmployerServiceServer struct {
 
 func (UnimplementedEmployerServiceServer) GetEmployer(context.Context, *GetEmployerRequest) (*GetEmployerResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetEmployer not implemented")
+}
+func (UnimplementedEmployerServiceServer) SearchEmployer(context.Context, *SearchEmployerRequest) (*SearchEmployerResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SearchEmployer not implemented")
 }
 func (UnimplementedEmployerServiceServer) mustEmbedUnimplementedEmployerServiceServer() {}
 
@@ -84,6 +98,24 @@ func _EmployerService_GetEmployer_Handler(srv interface{}, ctx context.Context, 
 	return interceptor(ctx, in, info, handler)
 }
 
+func _EmployerService_SearchEmployer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SearchEmployerRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(EmployerServiceServer).SearchEmployer(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protos.service.EmployerService/SearchEmployer",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(EmployerServiceServer).SearchEmployer(ctx, req.(*SearchEmployerRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // EmployerService_ServiceDesc is the grpc.ServiceDesc for EmployerService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -94,6 +126,10 @@ var EmployerService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetEmployer",
 			Handler:    _EmployerService_GetEmployer_Handler,
+		},
+		{
+			MethodName: "SearchEmployer",
+			Handler:    _EmployerService_SearchEmployer_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
