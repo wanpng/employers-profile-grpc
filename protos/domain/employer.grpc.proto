@@ -3,6 +3,9 @@ syntax = "proto3";
 package protos.domain;
 
 option go_package = "github.com/wanpng/employers-profile-grpc/grpc/domain";
+option java_multiple_files = true;
+option java_package = "com.wanpng.employer.grpc.domain";
+option java_outer_classname = "EmployerGrpcProtos";
 
 message EmployerGrpc {
     string id = 1;
