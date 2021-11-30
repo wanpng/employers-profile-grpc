@@ -20,6 +20,7 @@ const _ = grpc.SupportPackageIsVersion7
 type EmployerServiceClient interface {
 	GetEmployer(ctx context.Context, in *GetEmployerRequest, opts ...grpc.CallOption) (*GetEmployerResponse, error)
 	SearchEmployer(ctx context.Context, in *SearchEmployerRequest, opts ...grpc.CallOption) (*SearchEmployerResponse, error)
+	GetEmployerUser(ctx context.Context, in *GetEmployerUserRequest, opts ...grpc.CallOption) (*GetEmployerUserResponse, error)
 }
 
 type employerServiceClient struct {
@@ -48,12 +49,22 @@ func (c *employerServiceClient) SearchEmployer(ctx context.Context, in *SearchEm
 	return out, nil
 }
 
+func (c *employerServiceClient) GetEmployerUser(ctx context.Context, in *GetEmployerUserRequest, opts ...grpc.CallOption) (*GetEmployerUserResponse, error) {
+	out := new(GetEmployerUserResponse)
+	err := c.cc.Invoke(ctx, "/protos.service.EmployerService/GetEmployerUser", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // EmployerServiceServer is the server API for EmployerService service.
 // All implementations must embed UnimplementedEmployerServiceServer
 // for forward compatibility
 type EmployerServiceServer interface {
 	GetEmployer(context.Context, *GetEmployerRequest) (*GetEmployerResponse, error)
 	SearchEmployer(context.Context, *SearchEmployerRequest) (*SearchEmployerResponse, error)
+	GetEmployerUser(context.Context, *GetEmployerUserRequest) (*GetEmployerUserResponse, error)
 	mustEmbedUnimplementedEmployerServiceServer()
 }
 
@@ -66,6 +77,9 @@ func (UnimplementedEmployerServiceServer) GetEmployer(context.Context, *GetEmplo
 }
 func (UnimplementedEmployerServiceServer) SearchEmployer(context.Context, *SearchEmployerRequest) (*SearchEmployerResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SearchEmployer not implemented")
+}
+func (UnimplementedEmployerServiceServer) GetEmployerUser(context.Context, *GetEmployerUserRequest) (*GetEmployerUserResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetEmployerUser not implemented")
 }
 func (UnimplementedEmployerServiceServer) mustEmbedUnimplementedEmployerServiceServer() {}
 
@@ -116,6 +130,24 @@ func _EmployerService_SearchEmployer_Handler(srv interface{}, ctx context.Contex
 	return interceptor(ctx, in, info, handler)
 }
 
+func _EmployerService_GetEmployerUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetEmployerUserRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(EmployerServiceServer).GetEmployerUser(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protos.service.EmployerService/GetEmployerUser",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(EmployerServiceServer).GetEmployerUser(ctx, req.(*GetEmployerUserRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // EmployerService_ServiceDesc is the grpc.ServiceDesc for EmployerService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -130,6 +162,10 @@ var EmployerService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "SearchEmployer",
 			Handler:    _EmployerService_SearchEmployer_Handler,
+		},
+		{
+			MethodName: "GetEmployerUser",
+			Handler:    _EmployerService_GetEmployerUser_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -34,6 +34,16 @@ public final class EmployerServiceProtos {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_protos_service_SearchEmployerResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protos_service_GetEmployerUserRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protos_service_GetEmployerUserRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protos_service_GetEmployerUserResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protos_service_GetEmployerUserResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -45,26 +55,34 @@ public final class EmployerServiceProtos {
     java.lang.String[] descriptorData = {
       "\n*protos/service/employer_service.grpc.p" +
       "roto\022\016protos.service\032!protos/domain/empl" +
-      "oyer.grpc.proto\")\n\022GetEmployerRequest\022\023\n" +
+      "oyer.grpc.proto\032&protos/domain/employer_" +
+      "user.grpc.proto\")\n\022GetEmployerRequest\022\023\n" +
       "\013employer_id\030\001 \001(\t\"D\n\023GetEmployerRespons" +
       "e\022-\n\010employer\030\001 \001(\0132\033.protos.domain.Empl" +
       "oyerGrpc\">\n\025SearchEmployerRequest\022\024\n\014emp" +
       "loyer_ids\030\001 \003(\t\022\017\n\007keyword\030\002 \001(\t\".\n\026Sear" +
       "chEmployerResponse\022\024\n\014employer_ids\030\001 \003(\t" +
-      "2\312\001\n\017EmployerService\022V\n\013GetEmployer\022\".pr" +
-      "otos.service.GetEmployerRequest\032#.protos" +
-      ".service.GetEmployerResponse\022_\n\016SearchEm" +
-      "ployer\022%.protos.service.SearchEmployerRe" +
-      "quest\032&.protos.service.SearchEmployerRes" +
-      "ponseBr\n com.wanpng.employer.grpc.servic" +
-      "eB\025EmployerServiceProtosP\001Z5github.com/w" +
-      "anpng/employers-profile-grpc/grpc/servic" +
-      "eb\006proto3"
+      "\">\n\026GetEmployerUserRequest\022\017\n\007user_id\030\001 " +
+      "\001(\t\022\023\n\013employer_id\030\002 \001(\t\"Q\n\027GetEmployerU" +
+      "serResponse\0226\n\remployer_user\030\001 \001(\0132\037.pro" +
+      "tos.domain.EmployerUserGrpc2\256\002\n\017Employer" +
+      "Service\022V\n\013GetEmployer\022\".protos.service." +
+      "GetEmployerRequest\032#.protos.service.GetE" +
+      "mployerResponse\022_\n\016SearchEmployer\022%.prot" +
+      "os.service.SearchEmployerRequest\032&.proto" +
+      "s.service.SearchEmployerResponse\022b\n\017GetE" +
+      "mployerUser\022&.protos.service.GetEmployer" +
+      "UserRequest\032\'.protos.service.GetEmployer" +
+      "UserResponseBr\n com.wanpng.employer.grpc" +
+      ".serviceB\025EmployerServiceProtosP\001Z5githu" +
+      "b.com/wanpng/employers-profile-grpc/grpc" +
+      "/serviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.wanpng.employer.grpc.domain.EmployerGrpcProtos.getDescriptor(),
+          com.wanpng.employer.grpc.domain.EmployerUserGrpcProtos.getDescriptor(),
         });
     internal_static_protos_service_GetEmployerRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -90,7 +108,20 @@ public final class EmployerServiceProtos {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protos_service_SearchEmployerResponse_descriptor,
         new java.lang.String[] { "EmployerIds", });
+    internal_static_protos_service_GetEmployerUserRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_protos_service_GetEmployerUserRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protos_service_GetEmployerUserRequest_descriptor,
+        new java.lang.String[] { "UserId", "EmployerId", });
+    internal_static_protos_service_GetEmployerUserResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_protos_service_GetEmployerUserResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protos_service_GetEmployerUserResponse_descriptor,
+        new java.lang.String[] { "EmployerUser", });
     com.wanpng.employer.grpc.domain.EmployerGrpcProtos.getDescriptor();
+    com.wanpng.employer.grpc.domain.EmployerUserGrpcProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

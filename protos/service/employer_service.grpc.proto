@@ -8,10 +8,12 @@ option java_package = "com.wanpng.employer.grpc.service";
 option java_outer_classname = "EmployerServiceProtos";
 
 import "protos/domain/employer.grpc.proto";
+import "protos/domain/employer_user.grpc.proto";
 
 service EmployerService {
     rpc GetEmployer(GetEmployerRequest) returns (GetEmployerResponse);
     rpc SearchEmployer(SearchEmployerRequest) returns (SearchEmployerResponse);
+    rpc GetEmployerUser(GetEmployerUserRequest) returns (GetEmployerUserResponse);
 }
 
 message GetEmployerRequest {
@@ -29,4 +31,13 @@ message SearchEmployerRequest {
 
 message SearchEmployerResponse {
     repeated string employer_ids =  1;
+}
+
+message GetEmployerUserRequest {
+    string user_id = 1;
+    string employer_id = 2;
+}
+
+message GetEmployerUserResponse {
+    protos.domain.EmployerUserGrpc employer_user = 1;
 }

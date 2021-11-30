@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package protos.domain;
+
+option go_package = "github.com/wanpng/employers-profile-grpc/grpc/domain";
+option java_multiple_files = true;
+option java_package = "com.wanpng.employer.grpc.domain";
+option java_outer_classname = "EmployerUserGrpcProtos";
+
+message EmployerUserGrpc {
+    string id = 1;
+    string employer_id = 2;
+    string user_first_name = 3;
+    string user_last_name = 4;
+}
