@@ -62,21 +62,20 @@ public final class EmployerServiceProtos {
       "oyerGrpc\">\n\025SearchEmployerRequest\022\024\n\014emp" +
       "loyer_ids\030\001 \003(\t\022\017\n\007keyword\030\002 \001(\t\".\n\026Sear" +
       "chEmployerResponse\022\024\n\014employer_ids\030\001 \003(\t" +
-      "\">\n\026GetEmployerUserRequest\022\017\n\007user_id\030\001 " +
-      "\001(\t\022\023\n\013employer_id\030\002 \001(\t\"Q\n\027GetEmployerU" +
-      "serResponse\0226\n\remployer_user\030\001 \001(\0132\037.pro" +
-      "tos.domain.EmployerUserGrpc2\256\002\n\017Employer" +
-      "Service\022V\n\013GetEmployer\022\".protos.service." +
-      "GetEmployerRequest\032#.protos.service.GetE" +
-      "mployerResponse\022_\n\016SearchEmployer\022%.prot" +
-      "os.service.SearchEmployerRequest\032&.proto" +
-      "s.service.SearchEmployerResponse\022b\n\017GetE" +
-      "mployerUser\022&.protos.service.GetEmployer" +
-      "UserRequest\032\'.protos.service.GetEmployer" +
-      "UserResponseBr\n com.wanpng.employer.grpc" +
-      ".serviceB\025EmployerServiceProtosP\001Z5githu" +
-      "b.com/wanpng/employers-profile-grpc/grpc" +
-      "/serviceb\006proto3"
+      "\")\n\026GetEmployerUserRequest\022\017\n\007user_id\030\001 " +
+      "\001(\t\"Q\n\027GetEmployerUserResponse\0226\n\remploy" +
+      "er_user\030\001 \001(\0132\037.protos.domain.EmployerUs" +
+      "erGrpc2\256\002\n\017EmployerService\022V\n\013GetEmploye" +
+      "r\022\".protos.service.GetEmployerRequest\032#." +
+      "protos.service.GetEmployerResponse\022_\n\016Se" +
+      "archEmployer\022%.protos.service.SearchEmpl" +
+      "oyerRequest\032&.protos.service.SearchEmplo" +
+      "yerResponse\022b\n\017GetEmployerUser\022&.protos." +
+      "service.GetEmployerUserRequest\032\'.protos." +
+      "service.GetEmployerUserResponseBr\n com.w" +
+      "anpng.employer.grpc.serviceB\025EmployerSer" +
+      "viceProtosP\001Z5github.com/wanpng/employer" +
+      "s-profile-grpc/grpc/serviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -113,7 +112,7 @@ public final class EmployerServiceProtos {
     internal_static_protos_service_GetEmployerUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protos_service_GetEmployerUserRequest_descriptor,
-        new java.lang.String[] { "UserId", "EmployerId", });
+        new java.lang.String[] { "UserId", });
     internal_static_protos_service_GetEmployerUserResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_protos_service_GetEmployerUserResponse_fieldAccessorTable = new

@@ -18,16 +18,4 @@ public interface GetEmployerUserRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUserIdBytes();
-
-  /**
-   * <code>string employer_id = 2;</code>
-   * @return The employerId.
-   */
-  java.lang.String getEmployerId();
-  /**
-   * <code>string employer_id = 2;</code>
-   * @return The bytes for employerId.
-   */
-  com.google.protobuf.ByteString
-      getEmployerIdBytes();
 }
