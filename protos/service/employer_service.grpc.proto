@@ -14,6 +14,7 @@ service EmployerService {
     rpc GetEmployer(GetEmployerRequest) returns (GetEmployerResponse);
     rpc SearchEmployer(SearchEmployerRequest) returns (SearchEmployerResponse);
     rpc GetEmployerUser(GetEmployerUserRequest) returns (GetEmployerUserResponse);
+    rpc UpdateEmployerUser(UpdateEmployerUserRequest) returns (UpdateEmployerUserResponse);
 }
 
 message GetEmployerRequest {
@@ -37,6 +38,14 @@ message GetEmployerUserRequest {
     string user_id = 1;
 }
 
+message UpdateEmployerUserRequest {
+    protos.domain.EmployerUserGrpc user = 1;
+}
+
 message GetEmployerUserResponse {
     protos.domain.EmployerUserGrpc employer_user = 1;
+}
+
+message UpdateEmployerUserResponse {
+    string user_id = 1;
 }
