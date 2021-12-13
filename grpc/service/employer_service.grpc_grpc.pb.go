@@ -21,6 +21,7 @@ type EmployerServiceClient interface {
 	GetEmployer(ctx context.Context, in *GetEmployerRequest, opts ...grpc.CallOption) (*GetEmployerResponse, error)
 	SearchEmployer(ctx context.Context, in *SearchEmployerRequest, opts ...grpc.CallOption) (*SearchEmployerResponse, error)
 	GetEmployerUser(ctx context.Context, in *GetEmployerUserRequest, opts ...grpc.CallOption) (*GetEmployerUserResponse, error)
+	UpdateEmployerUser(ctx context.Context, in *UpdateEmployerUserRequest, opts ...grpc.CallOption) (*UpdateEmployerUserResponse, error)
 }
 
 type employerServiceClient struct {
@@ -58,6 +59,15 @@ func (c *employerServiceClient) GetEmployerUser(ctx context.Context, in *GetEmpl
 	return out, nil
 }
 
+func (c *employerServiceClient) UpdateEmployerUser(ctx context.Context, in *UpdateEmployerUserRequest, opts ...grpc.CallOption) (*UpdateEmployerUserResponse, error) {
+	out := new(UpdateEmployerUserResponse)
+	err := c.cc.Invoke(ctx, "/protos.service.EmployerService/UpdateEmployerUser", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // EmployerServiceServer is the server API for EmployerService service.
 // All implementations must embed UnimplementedEmployerServiceServer
 // for forward compatibility
@@ -65,6 +75,7 @@ type EmployerServiceServer interface {
 	GetEmployer(context.Context, *GetEmployerRequest) (*GetEmployerResponse, error)
 	SearchEmployer(context.Context, *SearchEmployerRequest) (*SearchEmployerResponse, error)
 	GetEmployerUser(context.Context, *GetEmployerUserRequest) (*GetEmployerUserResponse, error)
+	UpdateEmployerUser(context.Context, *UpdateEmployerUserRequest) (*UpdateEmployerUserResponse, error)
 	mustEmbedUnimplementedEmployerServiceServer()
 }
 
@@ -80,6 +91,9 @@ func (UnimplementedEmployerServiceServer) SearchEmployer(context.Context, *Searc
 }
 func (UnimplementedEmployerServiceServer) GetEmployerUser(context.Context, *GetEmployerUserRequest) (*GetEmployerUserResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetEmployerUser not implemented")
+}
+func (UnimplementedEmployerServiceServer) UpdateEmployerUser(context.Context, *UpdateEmployerUserRequest) (*UpdateEmployerUserResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateEmployerUser not implemented")
 }
 func (UnimplementedEmployerServiceServer) mustEmbedUnimplementedEmployerServiceServer() {}
 
@@ -148,6 +162,24 @@ func _EmployerService_GetEmployerUser_Handler(srv interface{}, ctx context.Conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _EmployerService_UpdateEmployerUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UpdateEmployerUserRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(EmployerServiceServer).UpdateEmployerUser(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protos.service.EmployerService/UpdateEmployerUser",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(EmployerServiceServer).UpdateEmployerUser(ctx, req.(*UpdateEmployerUserRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // EmployerService_ServiceDesc is the grpc.ServiceDesc for EmployerService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -166,6 +198,10 @@ var EmployerService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetEmployerUser",
 			Handler:    _EmployerService_GetEmployerUser_Handler,
+		},
+		{
+			MethodName: "UpdateEmployerUser",
+			Handler:    _EmployerService_UpdateEmployerUser_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
