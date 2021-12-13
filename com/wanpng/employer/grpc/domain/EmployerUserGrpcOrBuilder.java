@@ -54,4 +54,16 @@ public interface EmployerUserGrpcOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUserLastNameBytes();
+
+  /**
+   * <code>string email = 5;</code>
+   * @return The email.
+   */
+  java.lang.String getEmail();
+  /**
+   * <code>string email = 5;</code>
+   * @return The bytes for email.
+   */
+  com.google.protobuf.ByteString
+      getEmailBytes();
 }
