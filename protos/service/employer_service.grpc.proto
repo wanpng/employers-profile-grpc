@@ -39,7 +39,7 @@ message GetEmployerUserRequest {
 }
 
 message UpdateEmployerUserRequest {
-    protos.domain.EmployerUserGrpc user = 1;
+    protos.domain.EmployerUserGrpc employer_user = 1;
 }
 
 message GetEmployerUserResponse {
