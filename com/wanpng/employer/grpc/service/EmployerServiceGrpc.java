@@ -107,6 +107,37 @@ public final class EmployerServiceGrpc {
     return getGetEmployerUserMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.wanpng.employer.grpc.service.UpdateEmployerUserRequest,
+      com.wanpng.employer.grpc.service.UpdateEmployerUserResponse> getUpdateEmployerUserMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateEmployerUser",
+      requestType = com.wanpng.employer.grpc.service.UpdateEmployerUserRequest.class,
+      responseType = com.wanpng.employer.grpc.service.UpdateEmployerUserResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.wanpng.employer.grpc.service.UpdateEmployerUserRequest,
+      com.wanpng.employer.grpc.service.UpdateEmployerUserResponse> getUpdateEmployerUserMethod() {
+    io.grpc.MethodDescriptor<com.wanpng.employer.grpc.service.UpdateEmployerUserRequest, com.wanpng.employer.grpc.service.UpdateEmployerUserResponse> getUpdateEmployerUserMethod;
+    if ((getUpdateEmployerUserMethod = EmployerServiceGrpc.getUpdateEmployerUserMethod) == null) {
+      synchronized (EmployerServiceGrpc.class) {
+        if ((getUpdateEmployerUserMethod = EmployerServiceGrpc.getUpdateEmployerUserMethod) == null) {
+          EmployerServiceGrpc.getUpdateEmployerUserMethod = getUpdateEmployerUserMethod =
+              io.grpc.MethodDescriptor.<com.wanpng.employer.grpc.service.UpdateEmployerUserRequest, com.wanpng.employer.grpc.service.UpdateEmployerUserResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateEmployerUser"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.wanpng.employer.grpc.service.UpdateEmployerUserRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.wanpng.employer.grpc.service.UpdateEmployerUserResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new EmployerServiceMethodDescriptorSupplier("UpdateEmployerUser"))
+              .build();
+        }
+      }
+    }
+    return getUpdateEmployerUserMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -176,6 +207,13 @@ public final class EmployerServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEmployerUserMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void updateEmployerUser(com.wanpng.employer.grpc.service.UpdateEmployerUserRequest request,
+        io.grpc.stub.StreamObserver<com.wanpng.employer.grpc.service.UpdateEmployerUserResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateEmployerUserMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -199,6 +237,13 @@ public final class EmployerServiceGrpc {
                 com.wanpng.employer.grpc.service.GetEmployerUserRequest,
                 com.wanpng.employer.grpc.service.GetEmployerUserResponse>(
                   this, METHODID_GET_EMPLOYER_USER)))
+          .addMethod(
+            getUpdateEmployerUserMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.wanpng.employer.grpc.service.UpdateEmployerUserRequest,
+                com.wanpng.employer.grpc.service.UpdateEmployerUserResponse>(
+                  this, METHODID_UPDATE_EMPLOYER_USER)))
           .build();
     }
   }
@@ -240,6 +285,14 @@ public final class EmployerServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetEmployerUserMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void updateEmployerUser(com.wanpng.employer.grpc.service.UpdateEmployerUserRequest request,
+        io.grpc.stub.StreamObserver<com.wanpng.employer.grpc.service.UpdateEmployerUserResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateEmployerUserMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -275,6 +328,13 @@ public final class EmployerServiceGrpc {
     public com.wanpng.employer.grpc.service.GetEmployerUserResponse getEmployerUser(com.wanpng.employer.grpc.service.GetEmployerUserRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetEmployerUserMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.wanpng.employer.grpc.service.UpdateEmployerUserResponse updateEmployerUser(com.wanpng.employer.grpc.service.UpdateEmployerUserRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateEmployerUserMethod(), getCallOptions(), request);
     }
   }
 
@@ -315,11 +375,20 @@ public final class EmployerServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetEmployerUserMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.wanpng.employer.grpc.service.UpdateEmployerUserResponse> updateEmployerUser(
+        com.wanpng.employer.grpc.service.UpdateEmployerUserRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateEmployerUserMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_EMPLOYER = 0;
   private static final int METHODID_SEARCH_EMPLOYER = 1;
   private static final int METHODID_GET_EMPLOYER_USER = 2;
+  private static final int METHODID_UPDATE_EMPLOYER_USER = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -349,6 +418,10 @@ public final class EmployerServiceGrpc {
         case METHODID_GET_EMPLOYER_USER:
           serviceImpl.getEmployerUser((com.wanpng.employer.grpc.service.GetEmployerUserRequest) request,
               (io.grpc.stub.StreamObserver<com.wanpng.employer.grpc.service.GetEmployerUserResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_EMPLOYER_USER:
+          serviceImpl.updateEmployerUser((com.wanpng.employer.grpc.service.UpdateEmployerUserRequest) request,
+              (io.grpc.stub.StreamObserver<com.wanpng.employer.grpc.service.UpdateEmployerUserResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -414,6 +487,7 @@ public final class EmployerServiceGrpc {
               .addMethod(getGetEmployerMethod())
               .addMethod(getSearchEmployerMethod())
               .addMethod(getGetEmployerUserMethod())
+              .addMethod(getUpdateEmployerUserMethod())
               .build();
         }
       }

@@ -12,4 +12,5 @@ message EmployerUserGrpc {
     string employer_id = 2;
     string user_first_name = 3;
     string user_last_name = 4;
+    string email = 5;
 }
