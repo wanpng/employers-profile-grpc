@@ -8,17 +8,17 @@ public interface UpdateEmployerUserRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.protos.domain.EmployerUserGrpc user = 1;</code>
-   * @return Whether the user field is set.
+   * <code>.protos.domain.EmployerUserGrpc employer_user = 1;</code>
+   * @return Whether the employerUser field is set.
    */
-  boolean hasUser();
+  boolean hasEmployerUser();
   /**
-   * <code>.protos.domain.EmployerUserGrpc user = 1;</code>
-   * @return The user.
+   * <code>.protos.domain.EmployerUserGrpc employer_user = 1;</code>
+   * @return The employerUser.
    */
-  com.wanpng.employer.grpc.domain.EmployerUserGrpc getUser();
+  com.wanpng.employer.grpc.domain.EmployerUserGrpc getEmployerUser();
   /**
-   * <code>.protos.domain.EmployerUserGrpc user = 1;</code>
+   * <code>.protos.domain.EmployerUserGrpc employer_user = 1;</code>
    */
-  com.wanpng.employer.grpc.domain.EmployerUserGrpcOrBuilder getUserOrBuilder();
+  com.wanpng.employer.grpc.domain.EmployerUserGrpcOrBuilder getEmployerUserOrBuilder();
 }

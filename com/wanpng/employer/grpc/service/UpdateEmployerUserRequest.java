@@ -50,13 +50,13 @@ private static final long serialVersionUID = 0L;
             break;
           case 10: {
             com.wanpng.employer.grpc.domain.EmployerUserGrpc.Builder subBuilder = null;
-            if (user_ != null) {
-              subBuilder = user_.toBuilder();
+            if (employerUser_ != null) {
+              subBuilder = employerUser_.toBuilder();
             }
-            user_ = input.readMessage(com.wanpng.employer.grpc.domain.EmployerUserGrpc.parser(), extensionRegistry);
+            employerUser_ = input.readMessage(com.wanpng.employer.grpc.domain.EmployerUserGrpc.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(user_);
-              user_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(employerUser_);
+              employerUser_ = subBuilder.buildPartial();
             }
 
             break;
@@ -93,30 +93,30 @@ private static final long serialVersionUID = 0L;
             com.wanpng.employer.grpc.service.UpdateEmployerUserRequest.class, com.wanpng.employer.grpc.service.UpdateEmployerUserRequest.Builder.class);
   }
 
-  public static final int USER_FIELD_NUMBER = 1;
-  private com.wanpng.employer.grpc.domain.EmployerUserGrpc user_;
+  public static final int EMPLOYER_USER_FIELD_NUMBER = 1;
+  private com.wanpng.employer.grpc.domain.EmployerUserGrpc employerUser_;
   /**
-   * <code>.protos.domain.EmployerUserGrpc user = 1;</code>
-   * @return Whether the user field is set.
+   * <code>.protos.domain.EmployerUserGrpc employer_user = 1;</code>
+   * @return Whether the employerUser field is set.
    */
   @java.lang.Override
-  public boolean hasUser() {
-    return user_ != null;
+  public boolean hasEmployerUser() {
+    return employerUser_ != null;
   }
   /**
-   * <code>.protos.domain.EmployerUserGrpc user = 1;</code>
-   * @return The user.
+   * <code>.protos.domain.EmployerUserGrpc employer_user = 1;</code>
+   * @return The employerUser.
    */
   @java.lang.Override
-  public com.wanpng.employer.grpc.domain.EmployerUserGrpc getUser() {
-    return user_ == null ? com.wanpng.employer.grpc.domain.EmployerUserGrpc.getDefaultInstance() : user_;
+  public com.wanpng.employer.grpc.domain.EmployerUserGrpc getEmployerUser() {
+    return employerUser_ == null ? com.wanpng.employer.grpc.domain.EmployerUserGrpc.getDefaultInstance() : employerUser_;
   }
   /**
-   * <code>.protos.domain.EmployerUserGrpc user = 1;</code>
+   * <code>.protos.domain.EmployerUserGrpc employer_user = 1;</code>
    */
   @java.lang.Override
-  public com.wanpng.employer.grpc.domain.EmployerUserGrpcOrBuilder getUserOrBuilder() {
-    return getUser();
+  public com.wanpng.employer.grpc.domain.EmployerUserGrpcOrBuilder getEmployerUserOrBuilder() {
+    return getEmployerUser();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -133,8 +133,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (user_ != null) {
-      output.writeMessage(1, getUser());
+    if (employerUser_ != null) {
+      output.writeMessage(1, getEmployerUser());
     }
     unknownFields.writeTo(output);
   }
@@ -145,9 +145,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (user_ != null) {
+    if (employerUser_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getUser());
+        .computeMessageSize(1, getEmployerUser());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -164,10 +164,10 @@ private static final long serialVersionUID = 0L;
     }
     com.wanpng.employer.grpc.service.UpdateEmployerUserRequest other = (com.wanpng.employer.grpc.service.UpdateEmployerUserRequest) obj;
 
-    if (hasUser() != other.hasUser()) return false;
-    if (hasUser()) {
-      if (!getUser()
-          .equals(other.getUser())) return false;
+    if (hasEmployerUser() != other.hasEmployerUser()) return false;
+    if (hasEmployerUser()) {
+      if (!getEmployerUser()
+          .equals(other.getEmployerUser())) return false;
     }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -180,9 +180,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasUser()) {
-      hash = (37 * hash) + USER_FIELD_NUMBER;
-      hash = (53 * hash) + getUser().hashCode();
+    if (hasEmployerUser()) {
+      hash = (37 * hash) + EMPLOYER_USER_FIELD_NUMBER;
+      hash = (53 * hash) + getEmployerUser().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -317,11 +317,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (userBuilder_ == null) {
-        user_ = null;
+      if (employerUserBuilder_ == null) {
+        employerUser_ = null;
       } else {
-        user_ = null;
-        userBuilder_ = null;
+        employerUser_ = null;
+        employerUserBuilder_ = null;
       }
       return this;
     }
@@ -349,10 +349,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.wanpng.employer.grpc.service.UpdateEmployerUserRequest buildPartial() {
       com.wanpng.employer.grpc.service.UpdateEmployerUserRequest result = new com.wanpng.employer.grpc.service.UpdateEmployerUserRequest(this);
-      if (userBuilder_ == null) {
-        result.user_ = user_;
+      if (employerUserBuilder_ == null) {
+        result.employerUser_ = employerUser_;
       } else {
-        result.user_ = userBuilder_.build();
+        result.employerUser_ = employerUserBuilder_.build();
       }
       onBuilt();
       return result;
@@ -402,8 +402,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.wanpng.employer.grpc.service.UpdateEmployerUserRequest other) {
       if (other == com.wanpng.employer.grpc.service.UpdateEmployerUserRequest.getDefaultInstance()) return this;
-      if (other.hasUser()) {
-        mergeUser(other.getUser());
+      if (other.hasEmployerUser()) {
+        mergeEmployerUser(other.getEmployerUser());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -434,123 +434,123 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.wanpng.employer.grpc.domain.EmployerUserGrpc user_;
+    private com.wanpng.employer.grpc.domain.EmployerUserGrpc employerUser_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.wanpng.employer.grpc.domain.EmployerUserGrpc, com.wanpng.employer.grpc.domain.EmployerUserGrpc.Builder, com.wanpng.employer.grpc.domain.EmployerUserGrpcOrBuilder> userBuilder_;
+        com.wanpng.employer.grpc.domain.EmployerUserGrpc, com.wanpng.employer.grpc.domain.EmployerUserGrpc.Builder, com.wanpng.employer.grpc.domain.EmployerUserGrpcOrBuilder> employerUserBuilder_;
     /**
-     * <code>.protos.domain.EmployerUserGrpc user = 1;</code>
-     * @return Whether the user field is set.
+     * <code>.protos.domain.EmployerUserGrpc employer_user = 1;</code>
+     * @return Whether the employerUser field is set.
      */
-    public boolean hasUser() {
-      return userBuilder_ != null || user_ != null;
+    public boolean hasEmployerUser() {
+      return employerUserBuilder_ != null || employerUser_ != null;
     }
     /**
-     * <code>.protos.domain.EmployerUserGrpc user = 1;</code>
-     * @return The user.
+     * <code>.protos.domain.EmployerUserGrpc employer_user = 1;</code>
+     * @return The employerUser.
      */
-    public com.wanpng.employer.grpc.domain.EmployerUserGrpc getUser() {
-      if (userBuilder_ == null) {
-        return user_ == null ? com.wanpng.employer.grpc.domain.EmployerUserGrpc.getDefaultInstance() : user_;
+    public com.wanpng.employer.grpc.domain.EmployerUserGrpc getEmployerUser() {
+      if (employerUserBuilder_ == null) {
+        return employerUser_ == null ? com.wanpng.employer.grpc.domain.EmployerUserGrpc.getDefaultInstance() : employerUser_;
       } else {
-        return userBuilder_.getMessage();
+        return employerUserBuilder_.getMessage();
       }
     }
     /**
-     * <code>.protos.domain.EmployerUserGrpc user = 1;</code>
+     * <code>.protos.domain.EmployerUserGrpc employer_user = 1;</code>
      */
-    public Builder setUser(com.wanpng.employer.grpc.domain.EmployerUserGrpc value) {
-      if (userBuilder_ == null) {
+    public Builder setEmployerUser(com.wanpng.employer.grpc.domain.EmployerUserGrpc value) {
+      if (employerUserBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        user_ = value;
+        employerUser_ = value;
         onChanged();
       } else {
-        userBuilder_.setMessage(value);
+        employerUserBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
-     * <code>.protos.domain.EmployerUserGrpc user = 1;</code>
+     * <code>.protos.domain.EmployerUserGrpc employer_user = 1;</code>
      */
-    public Builder setUser(
+    public Builder setEmployerUser(
         com.wanpng.employer.grpc.domain.EmployerUserGrpc.Builder builderForValue) {
-      if (userBuilder_ == null) {
-        user_ = builderForValue.build();
+      if (employerUserBuilder_ == null) {
+        employerUser_ = builderForValue.build();
         onChanged();
       } else {
-        userBuilder_.setMessage(builderForValue.build());
+        employerUserBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
-     * <code>.protos.domain.EmployerUserGrpc user = 1;</code>
+     * <code>.protos.domain.EmployerUserGrpc employer_user = 1;</code>
      */
-    public Builder mergeUser(com.wanpng.employer.grpc.domain.EmployerUserGrpc value) {
-      if (userBuilder_ == null) {
-        if (user_ != null) {
-          user_ =
-            com.wanpng.employer.grpc.domain.EmployerUserGrpc.newBuilder(user_).mergeFrom(value).buildPartial();
+    public Builder mergeEmployerUser(com.wanpng.employer.grpc.domain.EmployerUserGrpc value) {
+      if (employerUserBuilder_ == null) {
+        if (employerUser_ != null) {
+          employerUser_ =
+            com.wanpng.employer.grpc.domain.EmployerUserGrpc.newBuilder(employerUser_).mergeFrom(value).buildPartial();
         } else {
-          user_ = value;
+          employerUser_ = value;
         }
         onChanged();
       } else {
-        userBuilder_.mergeFrom(value);
+        employerUserBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
-     * <code>.protos.domain.EmployerUserGrpc user = 1;</code>
+     * <code>.protos.domain.EmployerUserGrpc employer_user = 1;</code>
      */
-    public Builder clearUser() {
-      if (userBuilder_ == null) {
-        user_ = null;
+    public Builder clearEmployerUser() {
+      if (employerUserBuilder_ == null) {
+        employerUser_ = null;
         onChanged();
       } else {
-        user_ = null;
-        userBuilder_ = null;
+        employerUser_ = null;
+        employerUserBuilder_ = null;
       }
 
       return this;
     }
     /**
-     * <code>.protos.domain.EmployerUserGrpc user = 1;</code>
+     * <code>.protos.domain.EmployerUserGrpc employer_user = 1;</code>
      */
-    public com.wanpng.employer.grpc.domain.EmployerUserGrpc.Builder getUserBuilder() {
+    public com.wanpng.employer.grpc.domain.EmployerUserGrpc.Builder getEmployerUserBuilder() {
       
       onChanged();
-      return getUserFieldBuilder().getBuilder();
+      return getEmployerUserFieldBuilder().getBuilder();
     }
     /**
-     * <code>.protos.domain.EmployerUserGrpc user = 1;</code>
+     * <code>.protos.domain.EmployerUserGrpc employer_user = 1;</code>
      */
-    public com.wanpng.employer.grpc.domain.EmployerUserGrpcOrBuilder getUserOrBuilder() {
-      if (userBuilder_ != null) {
-        return userBuilder_.getMessageOrBuilder();
+    public com.wanpng.employer.grpc.domain.EmployerUserGrpcOrBuilder getEmployerUserOrBuilder() {
+      if (employerUserBuilder_ != null) {
+        return employerUserBuilder_.getMessageOrBuilder();
       } else {
-        return user_ == null ?
-            com.wanpng.employer.grpc.domain.EmployerUserGrpc.getDefaultInstance() : user_;
+        return employerUser_ == null ?
+            com.wanpng.employer.grpc.domain.EmployerUserGrpc.getDefaultInstance() : employerUser_;
       }
     }
     /**
-     * <code>.protos.domain.EmployerUserGrpc user = 1;</code>
+     * <code>.protos.domain.EmployerUserGrpc employer_user = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.wanpng.employer.grpc.domain.EmployerUserGrpc, com.wanpng.employer.grpc.domain.EmployerUserGrpc.Builder, com.wanpng.employer.grpc.domain.EmployerUserGrpcOrBuilder> 
-        getUserFieldBuilder() {
-      if (userBuilder_ == null) {
-        userBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getEmployerUserFieldBuilder() {
+      if (employerUserBuilder_ == null) {
+        employerUserBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.wanpng.employer.grpc.domain.EmployerUserGrpc, com.wanpng.employer.grpc.domain.EmployerUserGrpc.Builder, com.wanpng.employer.grpc.domain.EmployerUserGrpcOrBuilder>(
-                getUser(),
+                getEmployerUser(),
                 getParentForChildren(),
                 isClean());
-        user_ = null;
+        employerUser_ = null;
       }
-      return userBuilder_;
+      return employerUserBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
