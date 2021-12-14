@@ -73,25 +73,25 @@ public final class EmployerServiceProtos {
       "loyer_ids\030\001 \003(\t\022\017\n\007keyword\030\002 \001(\t\".\n\026Sear" +
       "chEmployerResponse\022\024\n\014employer_ids\030\001 \003(\t" +
       "\")\n\026GetEmployerUserRequest\022\017\n\007user_id\030\001 " +
-      "\001(\t\"H\n\031UpdateEmployerUserRequest\022+\n\002id\030\001" +
-      " \001(\0132\037.protos.domain.EmployerUserGrpc\"Q\n" +
-      "\027GetEmployerUserResponse\0226\n\remployer_use" +
-      "r\030\001 \001(\0132\037.protos.domain.EmployerUserGrpc" +
-      "\"-\n\032UpdateEmployerUserResponse\022\017\n\007user_i" +
-      "d\030\001 \001(\t2\233\003\n\017EmployerService\022V\n\013GetEmploy" +
-      "er\022\".protos.service.GetEmployerRequest\032#" +
-      ".protos.service.GetEmployerResponse\022_\n\016S" +
-      "earchEmployer\022%.protos.service.SearchEmp" +
-      "loyerRequest\032&.protos.service.SearchEmpl" +
-      "oyerResponse\022b\n\017GetEmployerUser\022&.protos" +
-      ".service.GetEmployerUserRequest\032\'.protos" +
-      ".service.GetEmployerUserResponse\022k\n\022Upda" +
-      "teEmployerUser\022).protos.service.UpdateEm" +
-      "ployerUserRequest\032*.protos.service.Updat" +
-      "eEmployerUserResponseBr\n com.wanpng.empl" +
-      "oyer.grpc.serviceB\025EmployerServiceProtos" +
-      "P\001Z5github.com/wanpng/employers-profile-" +
-      "grpc/grpc/serviceb\006proto3"
+      "\001(\t\"S\n\031UpdateEmployerUserRequest\0226\n\rempl" +
+      "oyer_user\030\001 \001(\0132\037.protos.domain.Employer" +
+      "UserGrpc\"Q\n\027GetEmployerUserResponse\0226\n\re" +
+      "mployer_user\030\001 \001(\0132\037.protos.domain.Emplo" +
+      "yerUserGrpc\"-\n\032UpdateEmployerUserRespons" +
+      "e\022\017\n\007user_id\030\001 \001(\t2\233\003\n\017EmployerService\022V" +
+      "\n\013GetEmployer\022\".protos.service.GetEmploy" +
+      "erRequest\032#.protos.service.GetEmployerRe" +
+      "sponse\022_\n\016SearchEmployer\022%.protos.servic" +
+      "e.SearchEmployerRequest\032&.protos.service" +
+      ".SearchEmployerResponse\022b\n\017GetEmployerUs" +
+      "er\022&.protos.service.GetEmployerUserReque" +
+      "st\032\'.protos.service.GetEmployerUserRespo" +
+      "nse\022k\n\022UpdateEmployerUser\022).protos.servi" +
+      "ce.UpdateEmployerUserRequest\032*.protos.se" +
+      "rvice.UpdateEmployerUserResponseBr\n com." +
+      "wanpng.employer.grpc.serviceB\025EmployerSe" +
+      "rviceProtosP\001Z5github.com/wanpng/employe" +
+      "rs-profile-grpc/grpc/serviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -134,7 +134,7 @@ public final class EmployerServiceProtos {
     internal_static_protos_service_UpdateEmployerUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protos_service_UpdateEmployerUserRequest_descriptor,
-        new java.lang.String[] { "Id", });
+        new java.lang.String[] { "EmployerUser", });
     internal_static_protos_service_GetEmployerUserResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_protos_service_GetEmployerUserResponse_fieldAccessorTable = new
