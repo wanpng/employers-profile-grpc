@@ -29,13 +29,15 @@ public final class EmployerUserGrpcProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n&protos/domain/employer_user.grpc.proto" +
-      "\022\rprotos.domain\"s\n\020EmployerUserGrpc\022\n\n\002i" +
-      "d\030\001 \001(\t\022\023\n\013employer_id\030\002 \001(\t\022\027\n\017user_fir" +
-      "st_name\030\003 \001(\t\022\026\n\016user_last_name\030\004 \001(\t\022\r\n" +
-      "\005email\030\005 \001(\tBq\n\037com.wanpng.employer.grpc" +
-      ".domainB\026EmployerUserGrpcProtosP\001Z4githu" +
-      "b.com/wanpng/employers-profile-grpc/grpc" +
-      "/domainb\006proto3"
+      "\022\rprotos.domain\"\332\001\n\020EmployerUserGrpc\022\n\n\002" +
+      "id\030\001 \001(\t\022\023\n\013employer_id\030\002 \001(\t\022\027\n\017user_fi" +
+      "rst_name\030\003 \001(\t\022\026\n\016user_last_name\030\004 \001(\t\022\r" +
+      "\n\005email\030\005 \001(\t\022\022\n\ncreated_by\030\006 \001(\t\022\024\n\014cre" +
+      "ated_when\030\007 \001(\t\022\022\n\nupdated_by\030\010 \001(\t\022\024\n\014u" +
+      "pdated_when\030\t \001(\t\022\021\n\tis_active\030\n \001(\010Bq\n\037" +
+      "com.wanpng.employer.grpc.domainB\026Employe" +
+      "rUserGrpcProtosP\001Z4github.com/wanpng/emp" +
+      "loyers-profile-grpc/grpc/domainb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -46,7 +48,7 @@ public final class EmployerUserGrpcProtos {
     internal_static_protos_domain_EmployerUserGrpc_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protos_domain_EmployerUserGrpc_descriptor,
-        new java.lang.String[] { "Id", "EmployerId", "UserFirstName", "UserLastName", "Email", });
+        new java.lang.String[] { "Id", "EmployerId", "UserFirstName", "UserLastName", "Email", "CreatedBy", "CreatedWhen", "UpdatedBy", "UpdatedWhen", "IsActive", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

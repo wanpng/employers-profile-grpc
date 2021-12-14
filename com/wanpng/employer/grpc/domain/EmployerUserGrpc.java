@@ -21,6 +21,10 @@ private static final long serialVersionUID = 0L;
     userFirstName_ = "";
     userLastName_ = "";
     email_ = "";
+    createdBy_ = "";
+    createdWhen_ = "";
+    updatedBy_ = "";
+    updatedWhen_ = "";
   }
 
   @java.lang.Override
@@ -81,6 +85,35 @@ private static final long serialVersionUID = 0L;
             java.lang.String s = input.readStringRequireUtf8();
 
             email_ = s;
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            createdBy_ = s;
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            createdWhen_ = s;
+            break;
+          }
+          case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            updatedBy_ = s;
+            break;
+          }
+          case 74: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            updatedWhen_ = s;
+            break;
+          }
+          case 80: {
+
+            isActive_ = input.readBool();
             break;
           }
           default: {
@@ -305,6 +338,169 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CREATED_BY_FIELD_NUMBER = 6;
+  private volatile java.lang.Object createdBy_;
+  /**
+   * <code>string created_by = 6;</code>
+   * @return The createdBy.
+   */
+  @java.lang.Override
+  public java.lang.String getCreatedBy() {
+    java.lang.Object ref = createdBy_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      createdBy_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string created_by = 6;</code>
+   * @return The bytes for createdBy.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCreatedByBytes() {
+    java.lang.Object ref = createdBy_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      createdBy_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CREATED_WHEN_FIELD_NUMBER = 7;
+  private volatile java.lang.Object createdWhen_;
+  /**
+   * <code>string created_when = 7;</code>
+   * @return The createdWhen.
+   */
+  @java.lang.Override
+  public java.lang.String getCreatedWhen() {
+    java.lang.Object ref = createdWhen_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      createdWhen_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string created_when = 7;</code>
+   * @return The bytes for createdWhen.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCreatedWhenBytes() {
+    java.lang.Object ref = createdWhen_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      createdWhen_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int UPDATED_BY_FIELD_NUMBER = 8;
+  private volatile java.lang.Object updatedBy_;
+  /**
+   * <code>string updated_by = 8;</code>
+   * @return The updatedBy.
+   */
+  @java.lang.Override
+  public java.lang.String getUpdatedBy() {
+    java.lang.Object ref = updatedBy_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      updatedBy_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string updated_by = 8;</code>
+   * @return The bytes for updatedBy.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getUpdatedByBytes() {
+    java.lang.Object ref = updatedBy_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      updatedBy_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int UPDATED_WHEN_FIELD_NUMBER = 9;
+  private volatile java.lang.Object updatedWhen_;
+  /**
+   * <code>string updated_when = 9;</code>
+   * @return The updatedWhen.
+   */
+  @java.lang.Override
+  public java.lang.String getUpdatedWhen() {
+    java.lang.Object ref = updatedWhen_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      updatedWhen_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string updated_when = 9;</code>
+   * @return The bytes for updatedWhen.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getUpdatedWhenBytes() {
+    java.lang.Object ref = updatedWhen_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      updatedWhen_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int IS_ACTIVE_FIELD_NUMBER = 10;
+  private boolean isActive_;
+  /**
+   * <code>bool is_active = 10;</code>
+   * @return The isActive.
+   */
+  @java.lang.Override
+  public boolean getIsActive() {
+    return isActive_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -334,6 +530,21 @@ private static final long serialVersionUID = 0L;
     if (!getEmailBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, email_);
     }
+    if (!getCreatedByBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, createdBy_);
+    }
+    if (!getCreatedWhenBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, createdWhen_);
+    }
+    if (!getUpdatedByBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, updatedBy_);
+    }
+    if (!getUpdatedWhenBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, updatedWhen_);
+    }
+    if (isActive_ != false) {
+      output.writeBool(10, isActive_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -357,6 +568,22 @@ private static final long serialVersionUID = 0L;
     }
     if (!getEmailBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, email_);
+    }
+    if (!getCreatedByBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, createdBy_);
+    }
+    if (!getCreatedWhenBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, createdWhen_);
+    }
+    if (!getUpdatedByBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, updatedBy_);
+    }
+    if (!getUpdatedWhenBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, updatedWhen_);
+    }
+    if (isActive_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(10, isActive_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -383,6 +610,16 @@ private static final long serialVersionUID = 0L;
         .equals(other.getUserLastName())) return false;
     if (!getEmail()
         .equals(other.getEmail())) return false;
+    if (!getCreatedBy()
+        .equals(other.getCreatedBy())) return false;
+    if (!getCreatedWhen()
+        .equals(other.getCreatedWhen())) return false;
+    if (!getUpdatedBy()
+        .equals(other.getUpdatedBy())) return false;
+    if (!getUpdatedWhen()
+        .equals(other.getUpdatedWhen())) return false;
+    if (getIsActive()
+        != other.getIsActive()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -404,6 +641,17 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getUserLastName().hashCode();
     hash = (37 * hash) + EMAIL_FIELD_NUMBER;
     hash = (53 * hash) + getEmail().hashCode();
+    hash = (37 * hash) + CREATED_BY_FIELD_NUMBER;
+    hash = (53 * hash) + getCreatedBy().hashCode();
+    hash = (37 * hash) + CREATED_WHEN_FIELD_NUMBER;
+    hash = (53 * hash) + getCreatedWhen().hashCode();
+    hash = (37 * hash) + UPDATED_BY_FIELD_NUMBER;
+    hash = (53 * hash) + getUpdatedBy().hashCode();
+    hash = (37 * hash) + UPDATED_WHEN_FIELD_NUMBER;
+    hash = (53 * hash) + getUpdatedWhen().hashCode();
+    hash = (37 * hash) + IS_ACTIVE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsActive());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -547,6 +795,16 @@ private static final long serialVersionUID = 0L;
 
       email_ = "";
 
+      createdBy_ = "";
+
+      createdWhen_ = "";
+
+      updatedBy_ = "";
+
+      updatedWhen_ = "";
+
+      isActive_ = false;
+
       return this;
     }
 
@@ -578,6 +836,11 @@ private static final long serialVersionUID = 0L;
       result.userFirstName_ = userFirstName_;
       result.userLastName_ = userLastName_;
       result.email_ = email_;
+      result.createdBy_ = createdBy_;
+      result.createdWhen_ = createdWhen_;
+      result.updatedBy_ = updatedBy_;
+      result.updatedWhen_ = updatedWhen_;
+      result.isActive_ = isActive_;
       onBuilt();
       return result;
     }
@@ -645,6 +908,25 @@ private static final long serialVersionUID = 0L;
       if (!other.getEmail().isEmpty()) {
         email_ = other.email_;
         onChanged();
+      }
+      if (!other.getCreatedBy().isEmpty()) {
+        createdBy_ = other.createdBy_;
+        onChanged();
+      }
+      if (!other.getCreatedWhen().isEmpty()) {
+        createdWhen_ = other.createdWhen_;
+        onChanged();
+      }
+      if (!other.getUpdatedBy().isEmpty()) {
+        updatedBy_ = other.updatedBy_;
+        onChanged();
+      }
+      if (!other.getUpdatedWhen().isEmpty()) {
+        updatedWhen_ = other.updatedWhen_;
+        onChanged();
+      }
+      if (other.getIsActive() != false) {
+        setIsActive(other.getIsActive());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1051,6 +1333,341 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       email_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object createdBy_ = "";
+    /**
+     * <code>string created_by = 6;</code>
+     * @return The createdBy.
+     */
+    public java.lang.String getCreatedBy() {
+      java.lang.Object ref = createdBy_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        createdBy_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string created_by = 6;</code>
+     * @return The bytes for createdBy.
+     */
+    public com.google.protobuf.ByteString
+        getCreatedByBytes() {
+      java.lang.Object ref = createdBy_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        createdBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string created_by = 6;</code>
+     * @param value The createdBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCreatedBy(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      createdBy_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string created_by = 6;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCreatedBy() {
+      
+      createdBy_ = getDefaultInstance().getCreatedBy();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string created_by = 6;</code>
+     * @param value The bytes for createdBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCreatedByBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      createdBy_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object createdWhen_ = "";
+    /**
+     * <code>string created_when = 7;</code>
+     * @return The createdWhen.
+     */
+    public java.lang.String getCreatedWhen() {
+      java.lang.Object ref = createdWhen_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        createdWhen_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string created_when = 7;</code>
+     * @return The bytes for createdWhen.
+     */
+    public com.google.protobuf.ByteString
+        getCreatedWhenBytes() {
+      java.lang.Object ref = createdWhen_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        createdWhen_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string created_when = 7;</code>
+     * @param value The createdWhen to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCreatedWhen(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      createdWhen_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string created_when = 7;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCreatedWhen() {
+      
+      createdWhen_ = getDefaultInstance().getCreatedWhen();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string created_when = 7;</code>
+     * @param value The bytes for createdWhen to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCreatedWhenBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      createdWhen_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object updatedBy_ = "";
+    /**
+     * <code>string updated_by = 8;</code>
+     * @return The updatedBy.
+     */
+    public java.lang.String getUpdatedBy() {
+      java.lang.Object ref = updatedBy_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        updatedBy_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string updated_by = 8;</code>
+     * @return The bytes for updatedBy.
+     */
+    public com.google.protobuf.ByteString
+        getUpdatedByBytes() {
+      java.lang.Object ref = updatedBy_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        updatedBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string updated_by = 8;</code>
+     * @param value The updatedBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUpdatedBy(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      updatedBy_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string updated_by = 8;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUpdatedBy() {
+      
+      updatedBy_ = getDefaultInstance().getUpdatedBy();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string updated_by = 8;</code>
+     * @param value The bytes for updatedBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUpdatedByBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      updatedBy_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object updatedWhen_ = "";
+    /**
+     * <code>string updated_when = 9;</code>
+     * @return The updatedWhen.
+     */
+    public java.lang.String getUpdatedWhen() {
+      java.lang.Object ref = updatedWhen_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        updatedWhen_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string updated_when = 9;</code>
+     * @return The bytes for updatedWhen.
+     */
+    public com.google.protobuf.ByteString
+        getUpdatedWhenBytes() {
+      java.lang.Object ref = updatedWhen_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        updatedWhen_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string updated_when = 9;</code>
+     * @param value The updatedWhen to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUpdatedWhen(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      updatedWhen_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string updated_when = 9;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUpdatedWhen() {
+      
+      updatedWhen_ = getDefaultInstance().getUpdatedWhen();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string updated_when = 9;</code>
+     * @param value The bytes for updatedWhen to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUpdatedWhenBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      updatedWhen_ = value;
+      onChanged();
+      return this;
+    }
+
+    private boolean isActive_ ;
+    /**
+     * <code>bool is_active = 10;</code>
+     * @return The isActive.
+     */
+    @java.lang.Override
+    public boolean getIsActive() {
+      return isActive_;
+    }
+    /**
+     * <code>bool is_active = 10;</code>
+     * @param value The isActive to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsActive(boolean value) {
+      
+      isActive_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool is_active = 10;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsActive() {
+      
+      isActive_ = false;
       onChanged();
       return this;
     }

@@ -13,4 +13,9 @@ message EmployerUserGrpc {
     string user_first_name = 3;
     string user_last_name = 4;
     string email = 5;
+    string created_by = 6;
+    string created_when = 7;
+    string updated_by = 8;
+    string updated_when = 9;
+    bool is_active = 10;
 }

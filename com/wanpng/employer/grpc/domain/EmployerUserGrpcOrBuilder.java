@@ -66,4 +66,58 @@ public interface EmployerUserGrpcOrBuilder extends
    */
   com.google.protobuf.ByteString
       getEmailBytes();
+
+  /**
+   * <code>string created_by = 6;</code>
+   * @return The createdBy.
+   */
+  java.lang.String getCreatedBy();
+  /**
+   * <code>string created_by = 6;</code>
+   * @return The bytes for createdBy.
+   */
+  com.google.protobuf.ByteString
+      getCreatedByBytes();
+
+  /**
+   * <code>string created_when = 7;</code>
+   * @return The createdWhen.
+   */
+  java.lang.String getCreatedWhen();
+  /**
+   * <code>string created_when = 7;</code>
+   * @return The bytes for createdWhen.
+   */
+  com.google.protobuf.ByteString
+      getCreatedWhenBytes();
+
+  /**
+   * <code>string updated_by = 8;</code>
+   * @return The updatedBy.
+   */
+  java.lang.String getUpdatedBy();
+  /**
+   * <code>string updated_by = 8;</code>
+   * @return The bytes for updatedBy.
+   */
+  com.google.protobuf.ByteString
+      getUpdatedByBytes();
+
+  /**
+   * <code>string updated_when = 9;</code>
+   * @return The updatedWhen.
+   */
+  java.lang.String getUpdatedWhen();
+  /**
+   * <code>string updated_when = 9;</code>
+   * @return The bytes for updatedWhen.
+   */
+  com.google.protobuf.ByteString
+      getUpdatedWhenBytes();
+
+  /**
+   * <code>bool is_active = 10;</code>
+   * @return The isActive.
+   */
+  boolean getIsActive();
 }
