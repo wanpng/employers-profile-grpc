@@ -191,7 +191,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < employerIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, employerIds_.getRaw(i));
     }
-    if (!getKeywordBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyword_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, keyword_);
     }
     unknownFields.writeTo(output);
@@ -211,7 +211,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getEmployerIdsList().size();
     }
-    if (!getKeywordBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyword_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, keyword_);
     }
     size += unknownFields.getSerializedSize();

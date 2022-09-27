@@ -66,4 +66,16 @@ public interface EmployerUserGrpcOrBuilder extends
    */
   com.google.protobuf.ByteString
       getEmailBytes();
+
+  /**
+   * <code>string photo_url = 6;</code>
+   * @return The photoUrl.
+   */
+  java.lang.String getPhotoUrl();
+  /**
+   * <code>string photo_url = 6;</code>
+   * @return The bytes for photoUrl.
+   */
+  com.google.protobuf.ByteString
+      getPhotoUrlBytes();
 }

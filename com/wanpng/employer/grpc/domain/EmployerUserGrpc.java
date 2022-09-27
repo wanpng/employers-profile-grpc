@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
     userFirstName_ = "";
     userLastName_ = "";
     email_ = "";
+    photoUrl_ = "";
   }
 
   @java.lang.Override
@@ -81,6 +82,12 @@ private static final long serialVersionUID = 0L;
             java.lang.String s = input.readStringRequireUtf8();
 
             email_ = s;
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            photoUrl_ = s;
             break;
           }
           default: {
@@ -305,6 +312,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PHOTO_URL_FIELD_NUMBER = 6;
+  private volatile java.lang.Object photoUrl_;
+  /**
+   * <code>string photo_url = 6;</code>
+   * @return The photoUrl.
+   */
+  @java.lang.Override
+  public java.lang.String getPhotoUrl() {
+    java.lang.Object ref = photoUrl_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      photoUrl_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string photo_url = 6;</code>
+   * @return The bytes for photoUrl.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPhotoUrlBytes() {
+    java.lang.Object ref = photoUrl_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      photoUrl_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -319,20 +364,23 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
     }
-    if (!getEmployerIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(employerId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, employerId_);
     }
-    if (!getUserFirstNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userFirstName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userFirstName_);
     }
-    if (!getUserLastNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userLastName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, userLastName_);
     }
-    if (!getEmailBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, email_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(photoUrl_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, photoUrl_);
     }
     unknownFields.writeTo(output);
   }
@@ -343,20 +391,23 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
     }
-    if (!getEmployerIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(employerId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, employerId_);
     }
-    if (!getUserFirstNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userFirstName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userFirstName_);
     }
-    if (!getUserLastNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userLastName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, userLastName_);
     }
-    if (!getEmailBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, email_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(photoUrl_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, photoUrl_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -383,6 +434,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getUserLastName())) return false;
     if (!getEmail()
         .equals(other.getEmail())) return false;
+    if (!getPhotoUrl()
+        .equals(other.getPhotoUrl())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -404,6 +457,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getUserLastName().hashCode();
     hash = (37 * hash) + EMAIL_FIELD_NUMBER;
     hash = (53 * hash) + getEmail().hashCode();
+    hash = (37 * hash) + PHOTO_URL_FIELD_NUMBER;
+    hash = (53 * hash) + getPhotoUrl().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -547,6 +602,8 @@ private static final long serialVersionUID = 0L;
 
       email_ = "";
 
+      photoUrl_ = "";
+
       return this;
     }
 
@@ -578,6 +635,7 @@ private static final long serialVersionUID = 0L;
       result.userFirstName_ = userFirstName_;
       result.userLastName_ = userLastName_;
       result.email_ = email_;
+      result.photoUrl_ = photoUrl_;
       onBuilt();
       return result;
     }
@@ -644,6 +702,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getEmail().isEmpty()) {
         email_ = other.email_;
+        onChanged();
+      }
+      if (!other.getPhotoUrl().isEmpty()) {
+        photoUrl_ = other.photoUrl_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -1051,6 +1113,82 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       email_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object photoUrl_ = "";
+    /**
+     * <code>string photo_url = 6;</code>
+     * @return The photoUrl.
+     */
+    public java.lang.String getPhotoUrl() {
+      java.lang.Object ref = photoUrl_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        photoUrl_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string photo_url = 6;</code>
+     * @return The bytes for photoUrl.
+     */
+    public com.google.protobuf.ByteString
+        getPhotoUrlBytes() {
+      java.lang.Object ref = photoUrl_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        photoUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string photo_url = 6;</code>
+     * @param value The photoUrl to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPhotoUrl(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      photoUrl_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string photo_url = 6;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPhotoUrl() {
+      
+      photoUrl_ = getDefaultInstance().getPhotoUrl();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string photo_url = 6;</code>
+     * @param value The bytes for photoUrl to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPhotoUrlBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      photoUrl_ = value;
       onChanged();
       return this;
     }

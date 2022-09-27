@@ -470,28 +470,28 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
     }
-    if (!getCompanyNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, companyName_);
     }
-    if (!getWebsiteUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(websiteUrl_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, websiteUrl_);
     }
-    if (!getIndustryBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(industry_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, industry_);
     }
-    if (!getPhotoUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(photoUrl_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, photoUrl_);
     }
-    if (!getCompanyPhoneNumberBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyPhoneNumber_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, companyPhoneNumber_);
     }
-    if (!getCompanyAddressBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyAddress_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, companyAddress_);
     }
-    if (!getCompanyInformationBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyInformation_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, companyInformation_);
     }
     if (isLanco_ != false) {
@@ -506,28 +506,28 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
     }
-    if (!getCompanyNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, companyName_);
     }
-    if (!getWebsiteUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(websiteUrl_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, websiteUrl_);
     }
-    if (!getIndustryBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(industry_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, industry_);
     }
-    if (!getPhotoUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(photoUrl_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, photoUrl_);
     }
-    if (!getCompanyPhoneNumberBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyPhoneNumber_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, companyPhoneNumber_);
     }
-    if (!getCompanyAddressBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyAddress_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, companyAddress_);
     }
-    if (!getCompanyInformationBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyInformation_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, companyInformation_);
     }
     if (isLanco_ != false) {
